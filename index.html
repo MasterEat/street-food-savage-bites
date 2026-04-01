@@ -1,13 +1,105 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savage Bites Athens | Urban Crave</title>
+  <meta name="description" content="Savage Bites by Urban Crave: premium smashed burgers in Athens.">
+  <link rel="canonical" href="https://mastereat.github.io/street-food-savage-bites/">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="navbar" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="brand"><span>SAVAGE BITES</span><small>by Urban Crave</small></a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-links">
+        <a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <a href="#menu" class="btn btn-accent">Order Now</a>
+      </nav>
+    </div>
+    <nav class="mobile-menu">
+      <a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#menu" class="btn btn-accent">Order Now</a>
+    </nav>
+  </header>
 
+  <main>
+    <section class="hero" id="home">
+      <img src="./assets/burger-hero.svg" alt="Cinematic Burger" class="hero-bg">
+      <div class="overlay"></div>
+      <div class="hero-content container">
+        <h1>SAVAGE <span>BITES</span></h1>
+        <p>by Urban Crave</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-accent">Feed Your Crave</a>
+          <a href="#contact" class="btn btn-outline">Find Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="featured">
+      <div class="container">
+        <h2>Featured <span>Cravings</span></h2>
+        <div class="grid cards3">
+          <article class="card"><img src="./assets/burger1.svg" alt="Smash Therapy"><h3>Smash Therapy <b>€9.50</b></h3><p>Double dry-aged beef, secret sauce, triple cheese.</p></article>
+          <article class="card"><img src="./assets/burger2.svg" alt="Double Trouble"><h3>Double Trouble <b>€11.00</b></h3><p>Two patties, caramelized onions, bacon jam.</p></article>
+          <article class="card"><img src="./assets/burger3.svg" alt="The Beast"><h3>The Beast <b>€13.50</b></h3><p>Triple patty, jalapeños, spicy mayo, crispy onions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="menu">
+      <div class="container">
+        <h2>Choose Your <span>Weapon</span></h2>
+        <div class="tabs">
+          <button class="tab active" data-cat="burgers">Smashed Burgers</button>
+          <button class="tab" data-cat="sides">Sides</button>
+          <button class="tab" data-cat="drinks">Drinks</button>
+          <button class="tab" data-cat="extras">Extras</button>
+        </div>
+        <div class="menu-list active" data-cat="burgers"><p>Smash Therapy — €9.50</p><p>Double Trouble — €11.00</p><p>The Beast — €13.50</p><p>Classic Savage — €8.50</p><p>Truffle Urban — €12.50</p></div>
+        <div class="menu-list" data-cat="sides"><p>Savage Fries — €4.50</p><p>Cheese Loaded — €6.50</p><p>Onion Rings — €5.00</p></div>
+        <div class="menu-list" data-cat="drinks"><p>Craft Cola — €3.50</p><p>Urban Lemonade — €4.00</p><p>Local Beer — €5.50</p></div>
+        <div class="menu-list" data-cat="extras"><p>Extra Patty — €3.00</p><p>Bacon Jam — €1.50</p><p>Savage Sauce — €1.00</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container split">
+        <img src="./assets/kitchen.svg" alt="Kitchen">
+        <div>
+          <h2>Born in the <span>Streets</span></h2>
+          <p>Savage Bites emerged from a desire to return to the raw, indulgent roots of street food.</p>
+          <p>Bold in flavor, bold in presentation, unapologetic in indulgence.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container split">
+        <div>
+          <h2>Talk to the <span>Pack</span></h2>
+          <p>Ermou 15, Athens 10563, Greece</p>
+          <p>+30 210 123 4567</p>
+          <p>Monday — Sunday · 12:00 PM — 02:00 AM</p>
+        </div>
+        <form class="card form" onsubmit="return false;">
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Your Email">
+          <select><option>General Inquiry</option><option>Feedback</option><option>Events/Catering</option><option>Careers</option></select>
+          <textarea rows="5" placeholder="How can we help?"></textarea>
+          <button class="btn btn-accent" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><p>© 2026 Savage Bites. All Rights Reserved.</p></div>
+  </footer>
+
+  <a class="sticky-call" href="tel:+302101234567">☎</a>
+  <script src="./scripts.js"></script>
+</body>
+</html>
