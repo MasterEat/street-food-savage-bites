@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
@@ -22,7 +22,8 @@ import {
 
 const SEO = ({ title, description, path }: { title: string; description: string; path: string }) => {
   const fullTitle = `${title} | Savage Bites Athens`;
-  const url = `https://ais-dev-f2ppvg3vdgxquafregdsum-192119356840.europe-west2.run.app${path}`;
+  const productionBaseUrl = 'https://mastereat.github.io/street-food-savage-bites/';
+  const url = path === '/' ? productionBaseUrl : `${productionBaseUrl}#${path}`;
   
   const structuredData = {
     "@context": "https://schema.org",
@@ -50,7 +51,7 @@ const SEO = ({ title, description, path }: { title: string; description: string;
       "opens": "12:00",
       "closes": "02:00"
     },
-    "menu": `${url}/menu`,
+    "menu": `${productionBaseUrl}#/menu`,
     "servesCuisine": "American, Burgers",
     "priceRange": "$$",
     "parentOrganization": {
